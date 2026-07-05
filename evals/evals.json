@@ -1,0 +1,40 @@
+{
+  "skill_name": "tencent-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我看看账号2的腾讯文档里都有什么文件",
+      "expected_output": "列出账号2根目录的所有文件，包括标题、类型、ID",
+      "expectations": [
+        "使用了 tencent-docs skill 的 Python CLI",
+        "指定了 --account 2",
+        "列出了文件列表，包含标题和类型",
+        "输出中包含'小狗属性测试'这个 form 类型文件"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我想看看小狗属性测试收集表里都有什么内容",
+      "expected_output": "使用 read-form 命令读取收集表的字段和提交数据",
+      "expectations": [
+        "使用了 tencent-docs skill",
+        "使用了 read-form 子命令",
+        "输出了收集表的字段列表（fields）",
+        "输出了提交记录（records）",
+        "字段中包含'喜欢的称呼及名字'等表单项"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "帮我在腾讯文档账号1里创建一个新的在线文档，标题是'测试文档2026'",
+      "expected_output": "使用 create-file 命令创建 doc 类型文档，返回 ID 和 url",
+      "expectations": [
+        "使用了 tencent-docs skill",
+        "使用了 create-file 子命令",
+        "指定了 --type doc",
+        "标题为'测试文档2026'",
+        "API 返回了 ID 和 url"
+      ]
+    }
+  ]
+}

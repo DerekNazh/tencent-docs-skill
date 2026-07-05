@@ -1,0 +1,17 @@
+# 凭证文件 - 绝对不能提交
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# 测试产物
+export_*.xlsx
+export_*.pdf
+*.xlsx
+
+# IDE
+.vscode/
+.idea/
