@@ -2,6 +2,12 @@
 
 腾讯文档 Open API 的 Claude Code Skill —— 通过 Python CLI 驱动腾讯文档的读写、管理和收集表数据导出。
 
+## 安装
+
+```bash
+npx skills add DerekNazh/tencent-docs-skill
+```
+
 ## 功能
 
 - 📁 文件管理：列出、搜索、创建、重命名、移动、复制、删除
@@ -11,13 +17,9 @@
 - 👥 多账号：`--account 1/2` 切换
 - 📄 文档读取：获取在线文档结构化内容
 
-## 安装
-
-```bash
-npx skills add <your-github-username>/tencent-docs-skill
-```
-
 ## 配置凭证
+
+安装后，编辑凭证文件：
 
 ```bash
 cd ~/.claude/skills/tencent-docs
@@ -30,7 +32,7 @@ cp .env.example .env
 ## 使用
 
 ```bash
-SCRIPT="~/.claude/skills/tencent-docs/scripts/tencent_docs.py"
+SCRIPT="$HOME/.claude/skills/tencent-docs/scripts/tencent_docs.py"
 
 # 验证认证
 python "$SCRIPT" --account 1 verify
@@ -48,7 +50,7 @@ python "$SCRIPT" --account 1 write-sheet FILE_ID --sheet-id XX --range A1:B2 --v
 ## 依赖
 
 ```bash
-pip install -r scripts/requirements.txt
+pip install -r ~/.claude/skills/tencent-docs/scripts/requirements.txt
 ```
 
 ## 注意事项

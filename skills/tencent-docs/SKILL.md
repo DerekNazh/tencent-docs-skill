@@ -15,7 +15,9 @@ time.
 All commands go through the single CLI entry point:
 
 ```sh
-SCRIPT="C:/Users/Administrator/.claude/skills/tencent-docs/scripts/tencent_docs.py"
+SCRIPT="$(dirname "$0")/scripts/tencent_docs.py"
+# Or use the absolute path after installation:
+# SCRIPT="$HOME/.claude/skills/tencent-docs/scripts/tencent_docs.py"
 python "$SCRIPT" --account 1 verify
 ```
 
